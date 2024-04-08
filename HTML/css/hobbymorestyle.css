@@ -1,0 +1,75 @@
+/* Black and white theme */
+body {
+    font-family: "Arial", sans-serif;
+    background-color: #fff; /* White background */
+    color: #000; /* Black text */
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Arial", sans-serif; /* Modern font */
+    font-size: 32px;
+    margin-top: 20px;
+    color: #fff;
+    background-color: #000;
+    padding: 20px;
+}
+
+.gallery {
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 300px;
+}
+
+.image-container {
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    flex: 1 0 200px; /* Adjust the width of each image container */
+    max-width: 50%; /* Allow the image container to occupy maximum 50% of the screen width */
+    display: flex; /* Enable flexbox */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+    flex: 1 0 50%; /* Allow the hovered image container to occupy maximum 50% of the screen width */
+}
+
+.image-container:hover img {
+    transform: scale(1.2); /* Scale up the hovered image */
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    right: 0; /* Position the overlay on the right side */
+    width: calc(50% - 20px); /* Take up all available space on the right side with a padding of 20px */
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.image-container:hover .overlay {
+    opacity: 1;
+}
+
+.overlay .text {
+    color: white;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+/* Add this to your existing CSS */
+
+

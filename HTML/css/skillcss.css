@@ -1,0 +1,290 @@
+.body {
+    background: url(bgcf.jpg);
+    background-size: contain;
+    background-position: center;
+}
+
+
+.sectionskills{
+    margin-left: 20em;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:40vh;
+    background-color: #000000;
+}
+
+.containers
+{ 
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    position:relative;
+    width: 200px;
+    display:flex;
+    justify-content:space-around;
+    padding: 1px;
+}
+
+.containers .card
+{
+    position:relative;
+    width:250px;
+    background:black;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:300px;
+    border-radius:4px;
+    text-align:center;
+    overflow:hidden;
+    transition:0.5s;
+}
+.containers .card:hover
+{
+    transform:translateY(-10px);
+    box-shadow:0 15px 35px rgba(0,0,0,.5);
+}
+.containers .card:before
+{
+    content:'';
+    position:absolute;
+    top:0;
+    left:-50%;
+    width:100%;
+    height:100%;
+    background:rgba(0, 0, 0, 0.03);
+    pointer-events:none;
+    z-index:1;
+}
+.percent
+{
+    position:relative;
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    box-shadow: inset 0 0 50px #000;
+    background:#000000;
+    z-index:1000;
+}
+.percent .num
+{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-radius:50%;
+}
+.percent .num h2
+{
+    color:#ffffff;
+    font-weight:700;
+    font-size:40px;
+    transition:0.5s;
+}
+.card:hover .percent .num h2
+{
+    color:#fff;
+    font-size:60px;
+}
+.percent .num h2 span
+{
+    color:#fff;
+    font-size:24px;
+    transition:0.5s;
+}
+.card:hover .percent .num h2 span
+{
+    color:#fff;
+}
+.text
+{
+    position:relative;
+    color:#fff;
+    margin-top:20px;
+    font-weight:700;
+    font-size:18px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    transition:0.5s;
+}
+.card:hover .text
+{
+    color:#fff;
+}
+svg
+{
+    position:relative;
+    width:150px;
+    height:150px;
+    z-index:1000;
+}
+svg circle
+{
+    width:100%;
+    height:100%;
+    fill:none;
+    stroke:#222222;
+    stroke-width:10;
+    stroke-linecap:round;
+    transform:translate(5px,5px);
+}
+svg circle:nth-child(2)
+{
+    stroke-dasharray:440;
+    stroke-dashoffset:440;
+}
+
+#card1:nth-child(1) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 85) / 100);
+    stroke:rgb(255, 255, 255);
+}
+
+#card2:nth-child(1) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 70) / 100);
+    stroke:rgb(255, 255, 255);
+}
+
+#card3:nth-child(1) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 60) / 100);
+    stroke:rgb(255, 255, 255);
+}
+
+#card4:nth-child(1) svg circle:nth-child(2) {
+    stroke-dashoffset: calc(440 - (440 * 50) / 100);
+    stroke:rgb(255, 255, 255);
+}
+
+#bodyskills{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    list-style: none;
+    background: rgb(0, 0, 0);
+
+}
+.h1skill{
+    text-align: center;
+}
+.h3skill{ 
+    margin: 5px;
+}
+.skills{
+    padding-left: 2000px;
+    list-style: none;
+    margin: 60px auto;
+    color: #fff;
+    padding: 20px;
+    height: 16em;
+    width: 50em; /* Adjust as needed */
+    margin-left: 20em; /* Add some space between the divs */
+    margin-top: 9em;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    background: rgb(0, 0, 0); /* Black background */
+    padding-bottom: 330px;
+}
+.skill li{
+    margin: 20px 0;
+    padding: 10px;
+}
+.bar{
+    background: #353b48;
+    display: block;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12) 0 1px 2px rgba(0, 0, 0, 0.24);
+    transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+.bar:hover{
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25) 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+.bar span{
+    height: 20px;
+    float: left;
+    background: linear-gradient(135deg, rgb(255, 255, 255)0%, rgb(131, 127, 127)100%);
+}
+.html{
+    width: 60%;
+    animation: html 3s;
+}
+.css{
+    width: 50%;
+    animation: css 3s;
+}
+
+.cplus{
+    width: 90%;
+    animation: cplus 3s;
+}
+
+.csharp{
+    width: 60%;
+    animation: csharp 3s;
+}
+@keyframes html {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
+@keyframes css {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+
+@keyframes cplus {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 90%;
+    }
+}
+
+@keyframes csharp {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
+#h1skills{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: white;
+    padding-top: 10px;
+    font-size: 3em;
+}
+.parent-container {
+    display: flex;
+}
+
+.containers-wrapper {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-gap: 20px; /* Adjust as needed */
+    
+}
+#secskil {
+    display: flex;
+}
+.percentage {
+    position: absolute;
+    right: 9%; /* Adjust as needed */
+    color: white; /* Add this line to ensure the text is visible */
+    z-index: 2; /* Ensure the text is above the bar */
+}

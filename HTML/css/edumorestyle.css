@@ -1,0 +1,94 @@
+/* CSS code goes here */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+header.title{
+    font-family: helvetica;
+    color: #000000; /* White text color */
+    padding: 20px 0; /* Adjust padding */
+    text-align: center;
+}
+
+#bg{
+    background: black;
+}
+
+.container {
+    width: 100%;
+    padding: 35px 10%;
+    padding-right: calc(10% - 30px);
+}
+
+main.row {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 20px;
+}
+
+.col .contents {
+    padding: 0px 30px;
+    border-left: 2px solid #bababa;
+}
+
+.col .contents .box {
+    position: relative;
+    padding: 20px;
+    border: 1px solid #eaeaea;
+    background-color: #ffffff;
+    cursor: pointer;
+    transition: all 0.4s;
+    margin-bottom: 20px;
+    text-align: center; /* Center align text */
+}
+
+.col .contents .box img {
+    width: 30%; /* Set image width to 100% */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.col .contents .box:hover {
+    box-shadow: 0px 3px 12px 0px #ccc;
+    border: 1px solid transparent;
+}
+
+.box h4 {
+    position: relative;
+    color: #0c0c0c;
+}
+
+.box h3 {
+    font-size: 19px;
+    padding: 10px 0px 6px;
+    font-family: helvetica;
+    color: #444;
+}
+
+.box p {
+    line-height: 1.2;
+    color: #666;
+    font-size: 17px;
+}
+
+@media (max-width: 768px) {
+    main.row {
+        grid-template-columns: 1fr;
+    }
+
+    .row .col:nth-child(2) {
+        margin-top: 30px;
+    }
+}
